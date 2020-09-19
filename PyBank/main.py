@@ -51,8 +51,13 @@ with open(budget_data, 'r') as budget:
 monthly_average = round((sum(net_change_list) / len(net_change_list)), 2)
 
 print("Financial Analysis")
-print(f'total months {total_months}')
-print(f'total profit {total_profit}')
-print(f'monthly average {monthly_average}')
-print(f'greatest increase {greatest_increase[0]} {greatest_increase[1]}')
-print(f'greatest decrease {greatest_decrease[0]} {greatest_decrease[1]}')
+print("---------------------")
+print(f'Total Months: {total_months}')
+print(f'Total: ${total_profit}')
+print(f'Average Change: ${monthly_average}')
+print(f'Greatest Increase in Profits: {greatest_increase[0]} {greatest_increase[1]}')
+print(f'Greatest Decrease in Profits: {greatest_decrease[0]} {greatest_decrease[1]}')
+
+results = open("results.txt", "w")
+
+
