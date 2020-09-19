@@ -6,13 +6,37 @@ election_data = os.path.join('Resources', 'election_data.csv')
 total_votes = 0
 candidates = []
 votes = []
+name = []
 percent_votes = []
+
+votes = 0
+total_candidates = 0
+winner_votes = 0
+greatest_votes ["", 0]
+candidate_options = []
+
+with open(csvpath) as election_data:
+    reader = csv.DictReader(election_data)
+
+    for row in reader:
+        votes = votes + 1
+        total_candidates = row["Candidate"]
+
+        if row[]
+
 
 with open(election_data, 'r') as elections:
     reader = csv.reader(elections, delimiter= ',')
     
     header = next(reader)
-    print(header)
+    
+    for row in reader:
+        votes = votes + 1
+        candidates = row["Candidate"]
+
+        if row
+
+    
 
     for row in elections:
         total_votes += 1
@@ -37,6 +61,7 @@ with open(election_data, 'r') as elections:
 print("Election Results")
 print("-------------------")
 print(f'Total Votes: {total_votes}')
+
 
 
 
