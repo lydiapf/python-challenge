@@ -60,4 +60,9 @@ print(f'Greatest Decrease in Profits: {greatest_decrease[0]} {greatest_decrease[
 
 with open('PyBank.txt', 'w') as text_file:
     print(f'Election Results', file=text_file)
-    
+    print("---------------------", file=text_file)
+    print(f'Total Months: {total_months}', file=text_file)
+    print(f'Total: ${total_profit}', file=text_file)
+    print(f'Average Change: ${monthly_average}', file=text_file)
+    print(f'Greatest Increase in Profits: {greatest_increase[0]} {greatest_increase[1]}', file=text_file)
+    print(f'Greatest Decrease in Profits: {greatest_decrease[0]} {greatest_decrease[1]}', file=text_file)
