@@ -1,6 +1,8 @@
 import os
 import csv
 
+# I did a majority of this homework with the aid of Bootcamp tutor
+
 budget_data = os.path.join('Resources', 'budget_data.csv')
 
 total_months = 0
