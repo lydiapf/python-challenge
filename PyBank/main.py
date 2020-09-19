@@ -58,6 +58,6 @@ print(f'Average Change: ${monthly_average}')
 print(f'Greatest Increase in Profits: {greatest_increase[0]} {greatest_increase[1]}')
 print(f'Greatest Decrease in Profits: {greatest_decrease[0]} {greatest_decrease[1]}')
 
-results = open("results.txt", "w")
-
-
+with open('PyBank.txt', 'w') as text_file:
+    print(f'Election Results', file=text_file)
+    
