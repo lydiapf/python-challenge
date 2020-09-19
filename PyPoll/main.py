@@ -24,6 +24,21 @@ with open(election_data, 'r') as elections:
         else:
             index = candidates.index(row[2])
             votes[index] += 1
+    
+    for votes in votes:
+        percentage = (votes/total_votes) * 100
+        percentage = round(percentage)
+        percent_votes.append(percentage)
+
+    winner = max(votes)
+    index = votes.index(winner)
+    winning_candidate = candidates[index]
+
+print("Election Results")
+print("-------------------")
+print(f'Total Votes: {total_votes}')
+
+
 
 
 
