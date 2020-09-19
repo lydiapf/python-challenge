@@ -22,3 +22,11 @@ with open(election_data, 'r') as csvfile:
         unique_name.append(row[0])
         votes.append(row[1])
 
+    candidate_zip = zip(unique_name, votes)
+    candidate_list = list(candidate_zip)
+
+    winner = max(votes)
+
+    for row in candidate_list:
+        if row[1] == winner:
+            winner_name = row[0]
