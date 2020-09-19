@@ -30,3 +30,9 @@ with open(election_data, 'r') as csvfile:
     for row in candidate_list:
         if row[1] == winner:
             winner_name = row[0]
+
+total_votes = len(candidate)
+
+khan = candidate.count('Khan')
+khan_percent = khan / total_votes
+

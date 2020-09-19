@@ -1,9 +1,15 @@
+# I did a majority of this homework with the aid of Bootcamp tutor. 
+# Additionally, I was having trouble pushing to GitLab, so I did a majority of my coding on a local version
+# and then copied it to this version once I was able to push to GitLab.
+
+#importing the csv file into Python and 
+
 import os
 import csv
 
-# I did a majority of this homework with the aid of Bootcamp tutor
-
 budget_data = os.path.join('Resources', 'budget_data.csv')
+
+# defining variables and lists
 
 total_months = 0
 total_profit = 0
@@ -59,6 +65,9 @@ print(f'Total: ${total_profit}')
 print(f'Average Change: ${monthly_average}')
 print(f'Greatest Increase in Profits: {greatest_increase[0]} {greatest_increase[1]}')
 print(f'Greatest Decrease in Profits: {greatest_decrease[0]} {greatest_decrease[1]}')
+
+# I decided to use this method rather than the "\n" since it is easier to copy over from the previous section
+# and print does not need to be deleted.
 
 with open('PyBank.txt', 'w') as text_file:
     print(f'Financial Analysis', file=text_file)
