@@ -8,8 +8,7 @@ votes = []
 unique_name = []
 
 with open(election_data, 'r') as csvfile:
-
-    reader = csv.reader(csvfile, delimiter='r')
+    reader = csv.reader(csvfile, delimiter=',')
 
     header = next(reader)
 
@@ -17,7 +16,7 @@ with open(election_data, 'r') as csvfile:
         candidate.append(row[2])
 
     count_candidates = [[x,candidate.count(x)] for x in set(candidate)]
-
+    
     for row in count_candidates:
         unique_name.append(row[0])
         votes.append(row[1])
@@ -29,8 +28,8 @@ with open(election_data, 'r') as csvfile:
 
     for row in candidate_list:
         if row[1] == winner:
-            winner_name = row[0]
-
+            winner_name = row[0]       
+            
 total_votes = len(candidate)
 
 khan = candidate.count('Khan')
