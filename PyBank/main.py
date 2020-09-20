@@ -1,8 +1,8 @@
 # I did a majority of this homework with the aid of Bootcamp tutor. 
-# Additionally, I was having trouble pushing to GitLab, so I did a majority of my coding on a local version
-# and then copied it to this version once I was able to push to GitLab.
+# Additionally, I was having trouble pushing to GitHub, so I did a majority of my coding on a local version
+# and then copied it to this version once I was able to push to GitHub.
 
-#importing the csv file into Python and 
+#importing the csv file into Python and defining the path 
 
 import os
 import csv
@@ -20,6 +20,8 @@ greatest_increase = ["", 0]
 greatest_decrease = ["", 99999999999]
 
 
+# opening the csv file, storing data in the reader variable, skip the header
+
 with open(budget_data, 'r') as budget:
     reader = csv.reader(budget, delimiter= ',')
 
@@ -28,7 +30,11 @@ with open(budget_data, 'r') as budget:
 
     first_row = next(reader)
 
+    # shift the start of months by one cell
+
     total_months = total_months + 1
+
+    # assign profit to corresponding row 
 
     total_profit += int(first_row[1])
 
@@ -58,6 +64,8 @@ with open(budget_data, 'r') as budget:
 
 monthly_average = round((sum(net_change_list) / len(net_change_list)), 2)
 
+# Print Statements
+
 print("Financial Analysis")
 print("---------------------")
 print(f'Total Months: {total_months}')
@@ -66,8 +74,9 @@ print(f'Average Change: ${monthly_average}')
 print(f'Greatest Increase in Profits: {greatest_increase[0]} {greatest_increase[1]}')
 print(f'Greatest Decrease in Profits: {greatest_decrease[0]} {greatest_decrease[1]}')
 
+# Get Output results in a txt.file
 # I decided to use this method rather than the "\n" since it is easier to copy over from the previous section
-# and print does not need to be deleted.
+# and "print" does not need to be deleted.
 
 with open('PyBank.txt', 'w') as text_file:
     print(f'Financial Analysis', file=text_file)
