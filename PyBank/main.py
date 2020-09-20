@@ -42,6 +42,7 @@ with open(budget_data, 'r') as budget:
 
 
 
+# Revenue calculations
 
     for row in reader:
         total_months = total_months + 1
@@ -54,13 +55,19 @@ with open(budget_data, 'r') as budget:
 
         net_change_list += [net_change]
 
+        # Greatest Increase
+
         if net_change > greatest_increase[1]:
             greatest_increase[0] = row[0]
             greatest_increase[1] = net_change
 
+        # Greatest Decrease
+
         if net_change < greatest_decrease[1]:
             greatest_decrease[0] = row[0]
             greatest_decrease[1] = net_change
+
+# calcuate the monthly average profit and round
 
 monthly_average = round((sum(net_change_list) / len(net_change_list)), 2)
 
